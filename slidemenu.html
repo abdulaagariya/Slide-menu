@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    /* CSS for the slide menu */
+    .menu {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 200px;
+      height: 100vh;
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      transition: transform 0.3s ease-in-out;
+      transform: translateX(-200px);
+    }
+
+    .menu.open {
+      transform: translateX(0);
+    }
+
+    /* CSS for the toggle button */
+    .toggle-button {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      cursor: pointer;
+      z-index: 9999;
+    }
+
+    .toggle-button .bar {
+      width: 30px;
+      height: 4px;
+      background-color: #fff;
+      margin-bottom: 6px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Toggle button to open/close the menu -->
+  <div class="toggle-button" onclick="toggleMenu()">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+  </div>
+
+  <!-- Slide menu -->
+  <div class="menu">
+    <ul>
+      <li><a href="background-color:rgb(30, 255, 120);#">Home</a></li>
+      <li><a href="background-color:rgb(30, 255, 120);#">About</a></li>
+      <li><a href="background-color:rgb(30, 255, 120);#">Services</a></li>
+      <li><a href="background-color:rgb(30, 255, 120);#">Contact</a></li>
+    </ul>
+  </div>
+
+  <script>
+    // JavaScript function to toggle the menu
+    function toggleMenu() {
+      var menu = document.querySelector('.menu');
+      menu.classList.toggle('open');
+    }
+  </script>
+</body>
+</html>
